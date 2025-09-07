@@ -1,0 +1,89 @@
+  ├── index.html
+  ├── reviews.html
+  ├── categories.html
+  ├── blog.html
+  ├── top10.html
+  ├── about.html
+  ├── contact.html
+  ├── style.css
+  └── script.js
+
+ထပ်တိုး css
+
+/* ===== Blog Detail Pages ===== */
+.blog-content {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.blog-post h2 {
+  font-size: 1.6rem;
+  margin: 30px 0 15px;
+  color: var(--wine-dark);
+  border-left: 4px solid var(--gold);
+  padding-left: 10px;
+}
+
+.blog-post p {
+  margin-bottom: 20px;
+}
+
+.blog-post ul {
+  list-style: disc inside;
+  margin: 15px 0 20px 15px;
+  text-align: left;
+}
+
+.blog-post ul li {
+  margin-bottom: 10px;
+}
+
+.blog-post strong {
+  color: var(--wine);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .blog-content {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+  .blog-post h2 {
+    font-size: 1.3rem;
+  }
+}
+
+
+ထပ်တိုး JS
+
+// Smooth scroll for in-article anchor links
+document.querySelectorAll('.blog-post a[href^="#"]').forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+
+
+
+
+
+cellar-location.jpg
+
+cellar-planning-sketch
+
+cellar-cooling-unit.jpg
+
+cellar-sensors.jpg
+cellar-racks.jpg
+cellar-small-fridge.jpg
+cellar-modern.jpg
+cellar-traditional.jpg
